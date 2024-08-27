@@ -1,0 +1,12 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$theme-colors: (
+  "primary": rgb(190, 130, 230),
+  "secondary": rgb(120, 100, 245),
+  "terciary": rgb(90, 65, 200),
+  "dark": rgb(20,20,20),
+  "white": rgb(255,255,255)
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";

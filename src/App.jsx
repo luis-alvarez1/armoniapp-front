@@ -1,13 +1,16 @@
-import React from 'react'
-import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Login from './pages/Login'
+import SignUp from './pages/SignUp'
 
-export default function App() {
-
+const App = () => {
   return (
-    <>
-      <div className='d-flex justify-content-center align-text-center bg-dark vh-100'>
-        <h1 className='bg-primary text-white rounded py-3 px-5 my-auto'>Bootstrap Funcionando</h1>
-      </div>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<SignUp/>} />
+        <Route path="/login" element={<Login/>} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;

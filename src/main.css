@@ -1,0 +1,61 @@
+:root {
+    --primary: rgb(190, 130, 230);
+    --secondary: rgb(120, 100, 245);
+    --terciary: rgb(90, 65, 200);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.close {
+    border-radius: 8%;
+}
+
+.close:hover {
+    background-color: var(--terciary);
+    color: white;
+}
+
+.form-control:focus {
+    border-color: var(--terciary);
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: 200ms;
+}
+
+.arrow {
+    height: 3rem;
+}
+
+.emotion{
+    height: 12rem;
+}
+
+@keyframes pan {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.dotted {
+    background-image: url(assets/Bg-Dots.png), radial-gradient(circle, rgb(20, 20, 20) 35%, rgba(0,0,0,1) 100%);
+    background-size: 5%;
+    animation: pan linear 180s infinite;
+}
+
+a:hover{
+    color: rgb(33,37,41);
+}
+
+div {
+    overflow: auto;
+}

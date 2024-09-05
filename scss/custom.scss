@@ -2,9 +2,11 @@
 @import "../node_modules/bootstrap/scss/variables";
 
 $theme-colors: (
-  "primary": rgb(190, 130, 230),
-  "secondary": rgb(120, 100, 245),
-  "terciary": rgb(90, 65, 200),
+  "primary": #C392F3,
+  "secondary": #7270E0,
+  "terciary": #603DEAA6,
+  "blue": #2B57C9C2,
+  "dark-blue": #0D3BB0BD,
   "dark": rgb(20,20,20),
   "white": rgb(255,255,255)
 );

@@ -1,11 +1,23 @@
 :root {
-    --primary: rgb(190, 130, 230);
-    --secondary: rgb(120, 100, 245);
-    --terciary: rgb(90, 65, 200);
+    --primary: #C392F3;
+    --secondary: #7270E0;
+    --terciary: #603DEAA6;
+    --blue: #2B57C9C2;
+    --dark-blue: #0D3BB0BD;
+    --dark: rgb(20,20,20);
+    --white: rgb(255,255,255);
+}
+
+.btn {
+    transition: transform 10ms;
 }
 
 .btn:active {
     transform: scale(0.95);
+}
+
+.ins-text {
+    margin: 0;
 }
 
 .close {
@@ -59,3 +71,24 @@ a:hover{
 div {
     overflow: auto;
 }
+
+h6 {
+    margin: 0;
+    font-weight: 700;
+}
+
+.test-bg {
+    height: 85%;
+}
+
+.test-title {
+    -webkit-text-stroke: 2px var(--terciary);
+    font-weight: 600;
+}
+
+.form-check-input {
+    height: 1.5rem;
+    width: 1.5rem;
+    translate: -50% -20%;
+    transition: background-color 200ms, outline 200ms;
+}   

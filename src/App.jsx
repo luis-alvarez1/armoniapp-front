@@ -7,6 +7,7 @@ import ProfileEdit from './pages/ProfileEdit'
 import Tareas from './pages/Tareas'
 import Home from './pages/Home'
 import Contacts from './pages/Contacts'
+import Breathing from './pages/Breathing'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/tasks' element={<Tareas/>} />
         <Route path='/home' element={<Home/>} />
         <Route path='/contacts' element={<Contacts/>} />
+        <Route path="/breathing" element={<Breathing/>} />
         <Route path='/profile' element={<Profile/>} />
         <Route path='/profile/edit' element={<ProfileEdit/>} />
       </Routes>

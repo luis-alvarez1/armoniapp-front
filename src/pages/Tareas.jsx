@@ -9,8 +9,8 @@ const Test = () => {
       <div className='container bg-primary test-bg w-75 text-white custom-bg rounded border border-secondary mt-4 overflow-hidden'>
         <header className='bg-terciary w-100 px-2 pt-2'>
                 <nav className='d-flex w-100 justify-content-between mt-2'>
-                  <Link to="/home">Inicio</Link>
-                  <Link to="/tasks">Tareas</Link>
+                  <Link className='navb' to="/home">Inicio</Link>
+                  <Link to="/tasks">Actividades</Link>
                   <Link to="/profile">Perfil</Link>
                   <Dropdown>
                     <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -23,15 +23,16 @@ const Test = () => {
                   </Dropdown>
               </nav>
         </header>
-        <h1 className='my-3'>Tareas</h1>
-        <div className=' bg-blue rounded p-2 h-50'>
+        <h1 className='my-3'>Actividades</h1>
+        <div className=' bg-dark rounded p-2 h-50'>
           <Link to="/test">
           <div className='bg-terciary d-flex justify-content-center rounded mx-auto mt-3 h-25 w-100'>
                 <h2 className='align-self-center'>Realiza un test</h2>
           </div></Link>
+          <Link to="/breathing">
           <div className='bg-terciary d-flex justify-content-center rounded mx-auto mt-3 h-25 w-100'>
                 <h2 className='align-self-center' >Realiza ejercicios de respiración</h2>          
-          </div>
+          </div></Link>
           <div className='bg-terciary d-flex justify-content-center rounded mx-auto mt-3 h-25 w-100'>
                 <h2 className='align-self-center' >Desconectate de tu dispositivo un rato</h2>          
           </div>

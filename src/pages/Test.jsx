@@ -86,7 +86,6 @@ const Test = () => {
         setResults({ depressionScore, anxietyScore, stressScore });
     };
 
-    // Función para determinar el nivel
     const getDepressionLevel = (score) => {
         if (score >= 14) return 'Depresión extremadamente severa';
         if (score >= 11) return 'Depresión severa';
@@ -113,18 +112,19 @@ const Test = () => {
 
     return (
         <div className='dotted vh-100 vw-100 d-flex text-center justify-content-center'>
-            <div className='container bg-primary test-bg w-75 text-white custom-bg rounded border p-3 border-secondary mt-5'>
+            <div className='container box bg-primary test-bg w-75 text-white custom-bg rounded border p-3 border-secondary mt-5'>
                 <h1 className='mt-1 display-4 test-title'>Test</h1>
+                <Link to="/home"><svg className='back-arrow' xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#FFFFFF"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg></Link>
                 {!results ? (
                     <>
-                        <div className='bg-terciary h-25 w-100 rounded mx-auto mt-3'>
+                        <div className='shadowth bg-terciary h-25 w-100 rounded mx-auto mt-3'>
                             <p className='ins-text mt-1'>Conteste la encuesta teniendo en cuenta los siguientes valores</p>
                             <h6>0. Nunca</h6>
                             <h6>1. A veces</h6>
                             <h6>2. Casi Siempre</h6>
                             <h6>3. Siempre</h6>
                         </div>
-                        <div className='bg-terciary rounded mx-auto mt-3 h-50 w-100'>
+                        <div className='shadowth bg-terciary rounded mx-auto mt-3 h-50 w-100'>
                             <h2 className='mb-3'>{questions[currentQuestionIndex].question}</h2>
                             {[0, 1, 2, 3].map(value => (
                                 <div key={value}>
@@ -147,13 +147,15 @@ const Test = () => {
                     </>
                 ) : (
                     <div className="results">
+                        <div className="bg-dark resultbox">
                         <h2>Resultados</h2>
                         <p><strong>Puntuación de Depresión:</strong> {results.depressionScore} - {getDepressionLevel(results.depressionScore)}</p>
                         <p><strong>Puntuación de Ansiedad:</strong> {results.anxietyScore} - {getAnxietyLevel(results.anxietyScore)}</p>
                         <p><strong>Puntuación de Estrés:</strong> {results.stressScore} - {getStressLevel(results.stressScore)}</p>
                         <Link to="/contacts"><CButton outline color='secondary' className="text-white">Comunicate con alguien</CButton></Link>
-                        <div className='bg-terciary w-75 mx-auto px-3 mt-1 pb-3 rounded'>
-                          <h1>ADVERTENCIA</h1>
+                        </div>
+                        <div className='shadowth bg-terciary w-75 mx-auto px-3  pb-3 rounded'>
+                          <h2>ADVERTENCIA</h2>
                           <h5 className=''>Esta función no está destinada a diagnosticar o tratar ninguna condición médica y no debe ser confiada para ningún propósito médico. Está diseñada para proporcionar información que puede ayudarle a gestionar su bienestar. Si tiene alguna preocupación sobre su salud, hable con un proveedor de atención médica. Si cree que está experimentando una emergencia médica, llame a los servicios de emergencia.</h5>
                         </div>
                     </div>

@@ -11,7 +11,7 @@ const Home = () => {
             <header className='bg-terciary w-100 px-2 pt-2'>
                 <nav className='d-flex w-100 justify-content-between mt-2'>
                   <Link to="/home">Inicio</Link>
-                  <Link to="/tasks">Tareas</Link>
+                  <Link to="/tasks">Actividades</Link>
                   <Link to="/profile">Perfil</Link>
                     <Dropdown>
                       <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -24,11 +24,11 @@ const Home = () => {
                     </Dropdown>
                 </nav>
             </header>
-                <h2 className='mt-5 text-white'>Usa estas lineas para hablar sobre tu salud mental con un profesional</h2>
-                <img src="../src/assets/Linea-amiga.png" alt="Llama a la linea amiga 444 44 48" />
-                <img src="../src/assets/123.png" alt="o llama a la linea de emergencia 123" />
-                <h2 className='text-white'>Y activa un codigo dorado en cualquiera de estas lineas para urgencias</h2>
-                <img className='mb-5' src="../src/assets/cd.png" alt="Activa un Codigo Dorado de Salud Mental en Cualquiera de estas" />
+                <h2 className='bg-dark rounded p-2 mt-5 text-white'>Usa estas lineas para hablar sobre tu salud mental con un profesional</h2>
+                <a target='_blank' href="https://www.medellin.gov.co/irj/portal/medellin?NavigationTarget=contenido/7451-Linea-Amiga-Saludable-"><img src="../src/assets/Linea-amiga.png" alt="Llama a la linea amiga 444 44 48" /></a>
+                <a target='_blank' href="https://scj.gov.co/es/general/l%C3%ADnea-123"><img src="../src/assets/123.png" alt="o llama a la linea de emergencia 123" /></a>
+                <h2 className='bg-dark rounded p-2 text-white'>Y activa un codigo dorado en cualquiera de estas lineas para urgencias</h2>
+                <a target='_blank' href="https://www.medellin.gov.co/es/sala-de-prensa/noticias/la-alcaldia-de-medellin-presento-el-codigo-dorado-para-atender-urgencias-en-salud-mental/"><img className='mb-5' src="../src/assets/cd.png" alt="Activa un Codigo Dorado de Salud Mental en Cualquiera de estas" /></a>
 			</div>
 		</div>
 	);

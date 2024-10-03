@@ -3,7 +3,7 @@
     --secondary: #0d3ca3;
     --terciary: #212ee7;
     --blue: #2e2e2e;
-    --dark-blue: #0D3BB0BD;
+    --dark-blue: #006ae4;
     --dark: rgb(20,20,20);
     --white: rgb(255,255,255);
 }
@@ -45,14 +45,6 @@ a{
     transition: 200ms;
 }
 
-.arrow {
-    height: 3rem;
-}
-
-.emotion{
-    height: 12rem;
-}
-
 @keyframes pan {
     0% {
         background-position: 0% 0%;
@@ -75,6 +67,7 @@ Link a:hover{
 
 .container {
     overflow: auto;
+    overflow-x: hidden;
 }
 
 h6 {
@@ -105,4 +98,147 @@ header a{
 
 header {
     height: 15%;
+}
+
+.box {
+    position: relative;
+}
+
+.circle {
+    width: 12rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: transparent;
+    border: solid .5rem #fff;
+    margin: auto;
+    position: relative;
+}
+
+.box .circle {
+    transition: transform 4s ease-in-out;
+}
+
+.circle::after{
+    content: "";
+    width: 8rem;
+    aspect-ratio: 1;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    border: solid .25rem #fff;
+}
+
+.back-arrow {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    transition: transform 200ms;
+}
+
+.back-arrow:hover {
+    transform: scale(1.1);
+}
+    
+.inhale {
+    transform: scale(1.25);
+}
+.exhale {
+    transform: scale(1);
+}
+
+.home-breath {
+    position: absolute;
+    right: .8rem;
+    top: 8rem;
+    width: 48%;
+    height: 65%;
+    border: solid .2rem var(--dark);
+    box-shadow: .2rem .2rem var(--dark);
+}
+
+.shadowth {
+    border: solid .2rem var(--dark);
+    box-shadow: .2rem .2rem var(--dark);
+}
+
+.home-main{
+    height: 65%;
+    border: solid .2rem var(--terciary);
+    box-shadow: .2rem .2rem var(--terciary);
+}
+
+.text-circle {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 100;
+}
+
+.resultbox {
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    translate: 0 -5%;
+    border: solid .2rem #fff;
+    box-shadow: .2rem .2rem #fff;
+}
+
+.home-breath .circle, .home-breath .circle::after {
+    transition: transform 100ms, border 100ms;
+}
+
+.home-breath .circle:hover::after {
+    border: solid .25rem var(--primary);
+}
+
+.home-breath .circle:hover {
+    transform: scale(1.05);
+    border: solid .5rem var(--primary);
+}
+
+.text-circle {
+    pointer-events: none;
+}
+
+nav a {
+    position: relative;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    background-color: var(--primary);
+    width: 0%;
+    border-radius: 1rem;
+    height: 10%;
+    bottom: 1rem;
+    transition: width 200ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.img-container {
+    height: 40%;
+    overflow: hidden;
+    width: 40%;
+    border: solid .2rem var(--dark);
+    box-shadow: .2rem .2rem var(--dark);
+}
+
+.bio {
+    height: 15%;
+    border: solid .2rem var(--dark);
+    box-shadow: .2rem .2rem var(--dark);
+}
+
+.img-container img {
+    position: relative;
+    translate: 0 -35%;
 }

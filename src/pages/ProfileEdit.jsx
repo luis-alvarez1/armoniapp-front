@@ -11,7 +11,7 @@ const Test = () => {
         <header className='bg-terciary w-100 px-2 pt-2'>
                 <nav className='d-flex w-100 justify-content-between mt-2'>
                   <Link to="/home">Inicio</Link>
-                  <Link to="/tasks">Tareas</Link>
+                  <Link to="/tasks">Actividades</Link>
                   <Link to="/profile">Perfil</Link>
                     <Dropdown>
                       <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -24,8 +24,11 @@ const Test = () => {
                     </Dropdown>
                 </nav>
             </header>
+            <div className="img-container bg-dark rounded mt-4 mx-auto">
+                <img src="../src/assets/pfp.png" height="600"/>
+            </div>
             <CButton color='terciary' size='lg' ><h2 className='align-self-center'>Cambiar Contraseña</h2></CButton><br />
-            <CButton color='terciary' size='lg'><h2 className='align-self-center'>Cambiar Bio descripción</h2></CButton>
+            <CButton color='terciary' size='lg'><h2 className='align-self-center'>Cambiar Bio/Descripción</h2></CButton>
         </div>
     </div>
   )

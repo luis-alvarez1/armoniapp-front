@@ -1,0 +1,108 @@
+:root {
+    --primary: #3a65f3;
+    --secondary: #0d3ca3;
+    --terciary: #212ee7;
+    --blue: #2e2e2e;
+    --dark-blue: #0D3BB0BD;
+    --dark: rgb(20,20,20);
+    --white: rgb(255,255,255);
+}
+
+.btn {
+    transition: transform 10ms;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.ins-text {
+    margin: 0;
+}
+
+.close {
+    border-radius: 8%;
+}
+
+.results p {
+    max-width: 60ch;
+    margin: .5rem auto;
+}
+
+.close:hover {
+    background-color: var(--terciary);
+    color: white;
+}
+
+.form-control:focus {
+    border-color: var(--terciary);
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: 200ms;
+}
+
+.arrow {
+    height: 3rem;
+}
+
+.emotion{
+    height: 12rem;
+}
+
+@keyframes pan {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.dotted {
+    background-image: url(assets/Bg-Dots.png), radial-gradient(circle, rgb(20, 20, 20) 35%, rgba(0,0,0,1) 100%);
+    background-size: 5%;
+    animation: pan linear 180s infinite;
+}
+
+Link a:hover{
+    color: rgb(33,37,41);
+}
+
+.container {
+    overflow: auto;
+}
+
+h6 {
+    margin: 0;
+    font-weight: 700;
+}
+
+.test-bg {
+    height: 85%;
+}
+
+.test-title {
+    -webkit-text-stroke: 2px var(--terciary);
+    font-weight: 600;
+}
+
+.form-check-input {
+    height: 1.5rem;
+    width: 1.5rem;
+    translate: -50% -20%;
+    transition: background-color 200ms, outline 200ms;
+}   
+
+header a{
+    font-size: 2rem;
+    margin: 0 2rem;
+}
+
+header {
+    height: 15%;
+}
